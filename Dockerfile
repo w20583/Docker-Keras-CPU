@@ -41,7 +41,6 @@ RUN pip3 --no-cache-dir install https://storage.googleapis.com/tensorflow/linux/
 
 # adding jupyter stuff
 RUN pip3 --no-cache-dir install \
-    # jupyter notebook and ipython (Python 3)
     jupyter \
     ipython \
     ipykernel \
