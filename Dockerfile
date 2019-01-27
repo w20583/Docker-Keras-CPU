@@ -34,7 +34,7 @@ RUN apt-get update -qq \
 # manually update numpy
 RUN pip3 --no-cache-dir install -U numpy==1.13.3
 
-ARG TENSORFLOW_VERSION=1.5.0
+ARG TENSORFLOW_VERSION=1.12.0
 ARG TENSORFLOW_DEVICE=cpu
 ARG TENSORFLOW_APPEND=
 RUN pip3 --no-cache-dir install https://storage.googleapis.com/tensorflow/linux/${TENSORFLOW_DEVICE}/tensorflow${TENSORFLOW_APPEND}-${TENSORFLOW_VERSION}-cp35-cp35m-linux_x86_64.whl
@@ -53,7 +53,7 @@ RUN pip3 --no-cache-dir install \
  && python3 -m ipykernel.kernelspec \
  && ipython kernel install
 
-ARG KERAS_VERSION=2.1.4
+ARG KERAS_VERSION=2.2.4
 ENV KERAS_BACKEND=tensorflow
 RUN pip3 --no-cache-dir install --no-dependencies git+https://github.com/fchollet/keras.git@${KERAS_VERSION}
 
