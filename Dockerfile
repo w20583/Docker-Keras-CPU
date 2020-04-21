@@ -34,7 +34,8 @@ RUN apt-get update -qq \
 # manually update numpy
 RUN pip3 --no-cache-dir install -U numpy==1.13.3
 
-ARG TENSORFLOW_VERSION=1.12.0
+#ARG TENSORFLOW_VERSION=1.12.0
+ARG TENSORFLOW_VERSION=1.14.0
 ARG TENSORFLOW_DEVICE=cpu
 ARG TENSORFLOW_APPEND=
 RUN pip3 --no-cache-dir install https://storage.googleapis.com/tensorflow/linux/${TENSORFLOW_DEVICE}/tensorflow${TENSORFLOW_APPEND}-${TENSORFLOW_VERSION}-cp35-cp35m-linux_x86_64.whl
